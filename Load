@@ -1,1 +1,9 @@
-print("hi")
+local c1 = loadstring(game:HttpGet('https://raw.githubusercontent.com/samuelrblx/Test-Project/main/Security'))()
+
+for _,a1 in next, c1 do 
+    if a1 == game:GetService("RbxAnalyticsService"):GetClientId() then 
+        print("hi")
+    else
+        warn(print("f"))  
+    end
+end
