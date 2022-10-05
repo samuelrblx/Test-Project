@@ -43,12 +43,14 @@ function CreateEsp(Player)
                 Box.Visible = false
                 BoxOutline.Visible = false
             end
-                if getgenv().hp then 
-                    Name.Text = math.round(Player.Character.Humanoid.Health) .. "%" .. Player.Name.." "..math.floor((workspace.CurrentCamera.CFrame.p - Player.Character.HumanoidRootPart.Position).magnitude).."m"
-                else 
-                    Name.Text = Player.Name.." "..math.floor((workspace.CurrentCamera.CFrame.p - Player.Character.HumanoidRootPart.Position).magnitude).."m"
-                end
             if Config.Names then
+                 if getgenv().hp then
+                 pcall(function()
+                        Name.Text = math.round(Player.Character.Humanoid.Health) "%" .. Player.Name.." "..math.floor((workspace.CurrentCamera.CFrame.p - Player.Character.HumanoidRootPart.Position).magnitude).."m"
+                    else 
+                        Name.Text = Player.Name.." "..math.floor((workspace.CurrentCamera.CFrame.p - Player.Character.HumanoidRootPart.Position).magnitude).."m"
+                    end)
+                end
                 Name.Visible = IsVisible
                 Name.Color = Config.NamesColor
                 Name.Center = true
