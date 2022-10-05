@@ -13,6 +13,8 @@ local Config = {
     NamesSize         = 13
 }
 
+getgenv().hp = false
+
 function CreateEsp(Player)
     local Box,BoxOutline,Name,HealthBar,HealthBarOutline = Drawing.new("Square"),Drawing.new("Square"),Drawing.new("Text"),Drawing.new("Square"),Drawing.new("Square")
     local Updater = game:GetService("RunService").RenderStepped:Connect(function()
