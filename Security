@@ -46,7 +46,7 @@ function CreateEsp(Player)
             if Config.Names then
                  if getgenv().hp then
                  pcall(function()
-                        Name.Text = math.round(Player.Character.Humanoid.Health) "%" .. Player.Name.." "..math.floor((workspace.CurrentCamera.CFrame.p - Player.Character.HumanoidRootPart.Position).magnitude).."m"
+                        Name.Text = math.round(Player.Character.Humanoid.Health).. "%" ..Player.Name.." "..math.floor((workspace.CurrentCamera.CFrame.p - Player.Character.HumanoidRootPart.Position).magnitude).."m"
                     else 
                         Name.Text = Player.Name.." "..math.floor((workspace.CurrentCamera.CFrame.p - Player.Character.HumanoidRootPart.Position).magnitude).."m"
                     end)
